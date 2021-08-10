@@ -1,0 +1,12 @@
+lmda = 0.2;
+p = 0.02;
+i = 0.1:0.1:250;
+g = lmda + i*p;
+lmda=lmda*ones(1,2500);
+
+plot(g,g.*exp(-g));
+hold on
+plot(g,lmda); 
+xlabel('g(i) (case when λ < λ max)')
+
+legend({'y = g.e^- ^g','y = λ'},'Location','southwest')
